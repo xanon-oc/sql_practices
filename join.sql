@@ -68,5 +68,22 @@ SELECT * FROM post
 
 -- we can also write the left and right join like this RIGHT OUTER - LEFT OUTER
 
+
+-- 19-8 Exploring Full, Cross, And Natural Joins
+
+
+SELECT * FROM post
+    FULL JOIN "user" ON post.user_id= "user".id; -- FULL OUTER JOIN
+
+
+
+
+-- if in two tables the reference id is same then you can use USING keyword
+
+SELECT * FROM employees
+    JOIN departments USING(dept_id);
+
+
+
 SELECT * FROM "user";
 SELECT * FROM post;
